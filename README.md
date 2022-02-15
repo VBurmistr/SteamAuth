@@ -27,28 +27,27 @@ Examples
 
 Generating 2FA:
 
-steamGuard.GenerateSteamGuardCodeForTime(Util.GetSystemUnixTime());
+	steamGuard.GenerateSteamGuardCodeForTime(Util.GetSystemUnixTime());
 
 Login into account(Without SteamGuard):
 
-UserLogin user = new UserLogin("bn2nw1o6z", "mbfbc9pvg");
-user.DoLogin()
+	UserLogin user = new UserLogin("bn2nw1o6z", "mbfbc9pvg");
+	user.DoLogin()
 
 Login into account(With SteamGuard):
 
-UserLogin user = new UserLogin("bn2nw1o6z", "mbfbc9pvg");
-user.TwoFactorCode = steamGuard.GenerateSteamGuardCodeForTime(Util.GetSystemUnixTime());
-user.DoLogin()
+	UserLogin user = new UserLogin("bn2nw1o6z", "mbfbc9pvg");
+	user.TwoFactorCode = steamGuard.GenerateSteamGuardCodeForTime(Util.GetSystemUnixTime());
+	user.DoLogin()
 
 Refreshing session:
 
-steamGuard.RefreshSession();
+	steamGuard.RefreshSession();
 
 Fetch confirmations:
 
-Confirmation[] confirmations =  steamGuard.FetchConfirmations();
+	Confirmation[] confirmations =  steamGuard.FetchConfirmations();
 
 Accept confirmation:
 
-steamGuard.AcceptConfirmation(confirmations[0]);
-
+	steamGuard.AcceptConfirmation(confirmations[0]);
