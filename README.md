@@ -1,8 +1,8 @@
 Java library for interacting with Steam Authenticator.
 
 Serializing from .mafile:
-Gson gson = new GsonBuilder().serializeNulls().create();
-SteamGuard steamGuard = gson.fromJson(mafileString, SteamGuard.class);
+	Gson gson = new GsonBuilder().serializeNulls().create();
+	SteamGuard steamGuard = gson.fromJson(mafileString, SteamGuard.class);
 
 
 As for now implemented:
